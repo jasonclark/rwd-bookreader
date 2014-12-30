@@ -1,0 +1,238 @@
+/*resets
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,hgroup,menu,footer,header,nav,section,summary,time,mark,audio,video{border:0;margin:0;padding:0;}
+article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,main,nav,section,audio,video{display:block;}
+*/
+
+/*typography presets*/
+@import "https://fonts.googleapis.com/css?family=Lato:400italic,800italic,400,800";
+
+/*global styles*/
+html {
+background:#333
+}
+
+html,body {
+width:100%;
+height:100%;
+margin:0;
+padding:0
+}
+
+body {
+background:#fff;
+color:#000;
+font-family:Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+font-size:100%;
+line-height:1.5
+}
+
+a {
+font-weight:700;
+text-decoration:none
+}
+
+a:link,a:visited {
+color:#369
+}
+
+a:hover,a:focus,a:active {
+color:#69c;
+text-decoration:underline
+}
+
+h1,h2,h3,ol,ul,dl,p {
+margin-top:0;
+margin-bottom:1.5rem;
+max-width:45em
+}
+
+.info-links li {
+display:inline-block;
+width:10em;
+height:auto;
+}
+
+li {
+list-style-type: none;
+margin-top:0;
+margin-bottom:1rem
+}
+
+.control {
+display:inline-block;
+float:right;
+border:1px solid;
+border-radius:.25em;
+padding:.25em .5em
+}
+
+.breadcrumb {margin-bottom:0;}
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+
+
+input[type=search] {
+	background: #fff url("../img/search-icon.png") no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 2px 2px 2px 32px;
+	width: 50px;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #369;
+
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+[role="banner"],[role="main"],[role="navigation"],[role="contentinfo"] {
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+display:block;
+width:100%;
+min-height:100%;
+padding:1em 5% 0;
+}
+
+[role="banner"] {
+background:#fff;
+min-height:auto;
+color:#333;
+}
+
+[role="main"] {
+background:#fff;
+color:#333
+}
+
+[role="navigation"] {
+background:#333;
+color:#fff
+}
+
+[role="contentinfo"] {
+display:block;
+background-color:#ccc;
+color:#333;
+padding-bottom:2em;
+}
+
+.reading-view {
+  display:table;
+  width: 100%;
+  min-height:100%;
+  /*height: 100%;*/
+}
+
+.pane {
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  /*
+  text-align: center;
+  vertical-align: middle;
+  line-height: 13em;*/
+}
+
+/*large screen view [default]*/
+@media all and (min-width: 35em) {
+.control {
+display:none
+}
+
+body {
+display:table
+}
+
+[role="navigation"] {
+display:table-caption;
+min-height:0;
+/*
+-webkit-columns:4 15em;
+-moz-columns:4 15em;
+columns:4 15em*/
+}
+
+[role="navigation"] h2 {
+-webkit-column-span:all;
+-moz-column-span:all;
+column-span:all
+}
+
+[role="navigation"] nav {
+-webkit-columns: 4 15em;
+-moz-columns: 4 15em;
+columns: 4 15em;
+}
+}
+
+/*small screen view*/
+@media all and (max-width: 35em) {
+.enhanced [role="main"] {
+-webkit-transition:all .25s;
+transition:all .25s;
+width:100%;
+position:absolute;
+z-index:2;
+top:0;
+right:0
+}
+
+.enhanced [role="navigation"] {
+width:75%;
+position:absolute;
+z-index:1;
+top:0;
+right:0
+}
+
+.enhanced .active [role="main"] {
+-webkit-transform:translateX(-75%);
+-ms-transform:translateX(-75%);
+transform:translateX(-75%)
+}
+
+ .pane {
+        display: block;
+        width: 100%;
+         }
+
+.reading {
+      display: table-caption;
+    }
+
+.metadata {
+      display: table-footer-group;
+    }
+
+}
