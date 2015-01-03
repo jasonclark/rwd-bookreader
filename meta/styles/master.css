@@ -84,9 +84,9 @@ input::-webkit-search-cancel-button {
 
 
 input[type=search] {
-	background: #fff url("../img/search-icon.png") no-repeat 9px center;
+	background: #fff url("../img/search-icon.png") no-repeat 4px center;
 	border: solid 1px #ccc;
-	padding: 2px 2px 2px 32px;
+	padding: 2px 2px 2px 26px;
 	width: 50px;
 
 	-webkit-border-radius: 4px;
