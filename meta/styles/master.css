@@ -19,6 +19,8 @@ h1,h2,h3,ol,ul,dl,p {margin-top:0;margin-bottom:1.5rem;max-width:45em;}
 li {list-style-type:none;margin-top:0;margin-bottom:1rem;}
 
 .control {display:inline-block;float:right;border:1px solid;border-radius:.25em;padding:.25em .5em;}
+.control.open:after {content: " +";}
+.control.close:after {content: " -";}
 .breadcrumb {margin-bottom:0;}
 
 input {outline:none;}
