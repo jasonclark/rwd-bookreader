@@ -21,7 +21,7 @@
 </header>
 
 <main epub:type="chapter" role="main" id="top">
-<a href="#menu" class="control">+ menu</a>
+<a href="#menu" class="control open">menu</a>
 <h1>The Mysteries of Udolpho, Chapter 1</h1>
 
 <section class="reading-view">
@@ -102,7 +102,7 @@
   </li>
 </ul>
 </nav>
-<a href="#top" class="control">- close</a>
+<a href="#top" class="control close">close</a>
 </section>
 
 <footer role="contentinfo">
