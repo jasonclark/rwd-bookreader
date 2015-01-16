@@ -58,8 +58,9 @@ padding:1em 5% 0;
 /*height: 100%;*/}
 .pane {display:table-cell;text-align:left;vertical-align:top;
 /*text-align:center;vertical-align:middle;line-height:13em;*/}
+.reading.pane {padding-right:3em;}
 
-/*large screen view [default]*/
+/*large screen view [default] > 560px (based on 16px browser default)*/
 @media all and (min-width:35em) {
 .control {display:none;}
 body {display:table;}
@@ -69,7 +70,11 @@ body {display:table;}
 [role="navigation"] nav {-webkit-columns:4 15em;-moz-columns:4 15em;columns:4 15em;}
 }
 
-/*small screen view*/
+/*medium screen view [default] > 768px (based on 16px browser default)*/
+@media all and (min-width:48em) {
+}
+
+/*small screen view < 560px (based on 16px browser default)*/
 @media all and (max-width:35em) {
 [role="banner"],[role="contentinfo"] {display:none;}
 .enhanced [role="main"] {-webkit-transition:all .25s;transition:all .25s;width:100%;position:absolute;z-index:2;top:0;right:0;}
@@ -77,6 +82,7 @@ body {display:table;}
 .enhanced .active [role="main"] {-webkit-transform:translateX(-75%);-ms-transform:translateX(-75%);transform:translateX(-75%);}
 .pane {display:block;width:100%;}
 .reading {display:table-caption;}
+.reading.pane {padding-right:0;}
 /*[role="banner"] {display:table-header-group;}*/
 .metadata {display:table-footer-group;}
 /*[epub|type="sidebar"] {border-top:1px solid #333;}*/
