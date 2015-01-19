@@ -93,7 +93,7 @@ body {display:table;}
 [role="navigation"] {display:table-caption;min-height:0;
 /*-webkit-columns:4 15em;-moz-columns:4 15em;columns:4 15em*/}
 [role="navigation"] h2 {-webkit-column-span:all;-moz-column-span:all;column-span:all;}
-[role="navigation"] nav {-webkit-columns:4 15em;-moz-columns:4 15em;columns:4 15em;}
+[role="navigation"] nav {margin-left:-39px;-webkit-columns:4 15em;-moz-columns:4 15em;columns:4 15em;}
 }
 
 /*medium screen view [default] > 768px (based on 16px browser default)*/
