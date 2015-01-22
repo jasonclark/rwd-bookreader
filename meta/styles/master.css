@@ -44,10 +44,11 @@ h1,h2,h3,ol,ul,dl,p {margin-top:0;margin-bottom:1.5rem;max-width:45em;}
 .info-links li {display:inline-block;width:10em;height:auto;}
 li {list-style-type:none;margin-top:0;margin-bottom:1rem;}
 
-.control {display:inline-block;float:right;border:1px solid;border-radius:.25em;margin-right:-.5em;padding:.25em .5em;}
+.control {display:inline-block;float:right;border:1px solid;border-radius:.25em;margin-right:-1em;padding:.25em .5em;}
 .control.open:after {content: " +";}
 .control.close:after {content: " -";}
 .breadcrumb {margin-bottom:0;}
+.pagination:before,.pagination:after {content: "-";}
 
 input {outline:none;}
 input[type=search] {-webkit-appearance:textfield;-webkit-box-sizing:content-box;font-family:inherit;font-size:100%;}
@@ -84,8 +85,8 @@ padding:1em 5% 0;
 .pane {display:table-cell;text-align:left;vertical-align:top;/*text-align:center;vertical-align:middle;line-height:13em;*/}
 .reading.pane {padding-right:3em;}
 
-/*large screen view [default] > 560px (based on 16px browser default)*/
-@media all and (min-width:35em) {
+/*large screen view [default] > 768px (based on 16px browser default)*/
+@media all and (min-width:48em) {
 .control {display:none;}
 body {display:table;}
 [role="navigation"] {display:table-caption;min-height:0;/*-webkit-columns:4 15em;-moz-columns:4 15em;columns:4 15em*/}
@@ -94,12 +95,8 @@ body {display:table;}
 [role="contentinfo"] ul {margin-left:-2.5em;}
 }
 
-/*medium screen view [default] > 768px (based on 16px browser default)*/
-@media all and (min-width:48em) {
-}
-
-/*small screen view < 560px (based on 16px browser default)*/
-@media all and (max-width:35em) {
+/*medium screen view < 768px (based on 16px browser default)*/
+@media all and (max-width:48em) {
 [role="banner"],[role="contentinfo"] {display:none;}
 .enhanced [role="main"] {-webkit-transition:all .25s;transition:all .25s;width:100%;position:absolute;z-index:2;top:0;right:0;}
 .enhanced [role="navigation"] {width:75%;position:absolute;z-index:1;top:0;right:0;}
@@ -107,8 +104,12 @@ body {display:table;}
 .pane {display:block;width:100%;}
 .reading {display:table-caption;}
 .reading.pane {padding-right:0;}
-/*[role="banner"] {display:table-header-group;}*/
 .metadata {display:table-footer-group;}
-/*[epub|type="sidebar"] {border-top:1px solid #333;}*/
 [role="complementary"] {border-top:1px solid #333;}
+/*[epub|type="sidebar"] {border-top:1px solid #333;}*/
+/*[role="banner"] {display:table-header-group;}*/
 }
+
+/*small screen view < 560px (based on 16px browser default)*/
+/*@media all and (max-width:35em) {
+}*/
