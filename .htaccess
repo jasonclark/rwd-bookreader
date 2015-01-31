@@ -1,2 +1,8 @@
+#add handler that allows html to work dynamically as PHP
+#https://httpd.apache.org/docs/current/mod/mod_mime.html#addhandler
 AddType application/x-httpd-php .html
 #AddHandler x-httpd-php5 .php .html
+
+#serve all resources labeled as 'text/html' or 'text/plain' with the media type 'charset' parameter set to UTF-8'
+#https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
+AddDefaultCharset utf-8
