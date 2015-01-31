@@ -48,8 +48,9 @@ body.ragged .body_text p {text-align:left;}*/
 
 a {font-weight:700;text-decoration:none;}
 a:link,a:visited {color:#369;}
-a:hover,a:focus,a:active {color:#69c;text-decoration:underline;}
+a:hover,a:focus,a:active {color:#69c;outline:0;text-decoration:underline;}
 h1,h2,h3,ol,ul,dl,p {margin-top:0;margin-bottom:1.5rem;max-width:45em;}
+img {border:0;-ms-interpolation-mode:bicubic;}
 .info-links li {display:inline-block;width:10em;height:auto;}
 li {list-style-type:none;margin-top:0;margin-bottom:1rem;}
 .control {display:inline-block;float:right;border:1px solid;border-radius:.25em;margin-right:-0.9em;padding:.25em .5em;}
