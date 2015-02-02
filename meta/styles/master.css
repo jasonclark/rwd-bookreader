@@ -58,7 +58,7 @@ li {list-style-type:none;margin-top:0;margin-bottom:1rem;}
 .control.close:after {content: " -";}
 .breadcrumb {margin-bottom:0;}
 .pagination:before,.pagination:after {content: "-";}
-[property="publisher"]:before {content: "\00a9  ";}
+[property~="publisher"]:before {content: "\00A9\ ";}
 
 input {outline:none;}
 input::-webkit-search-decoration,input::-webkit-search-cancel-button {display:none;}
