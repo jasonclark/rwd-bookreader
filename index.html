@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Book Reader @ Your Library</title>
-<meta name="description" content="Page description. No longer than 155 characters." />
+<meta name="description" property="description" content="Page description. No longer than 155 characters." />
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@publisher_handle">
@@ -39,7 +39,7 @@
 </nav>
 </header>
 
-<main epub:type="bodymatter chapter" role="main" id="top">
+<main data-bookmark="#" id="top" epub:type="bodymatter chapter" role="main">
 <a href="#menu" class="control open">menu</a>
 <h1 epub:type="title">The Mysteries of Udolpho, Chapter 1</h1>
 <section class="reading-view">
@@ -107,7 +107,7 @@ knowledge and the illuminations of genius.
 </section>
 </main>
 
-<section role="navigation" id="menu">
+<section id="menu" role="navigation">
 <h2>Book Reader</h2>
 <nav epub:type="landmarks">
 <ul>
@@ -115,7 +115,7 @@ knowledge and the illuminations of genius.
   <li><a href="#">Title Page</a></li>
   <li>Chapter</li>
   <li>
-  <form role="search" class="search" action="#">
+  <form class="search" role="search" action="#">
     <input type="search" placeholder="Search">
   </form>
   </li>
