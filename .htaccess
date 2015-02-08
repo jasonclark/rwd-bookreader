@@ -31,3 +31,22 @@ AddOutputFilterByType DEFLATE "text/css" "text/html" "text/javascript" "text/pla
 </FilesMatch>
 </IfModule>
 
+#rewrite rules for URLs and directory patterns
+#https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine
+#https://httpd.apache.org/docs/current/mod/core.html#options
+#https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
+#https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions
+<IfModule mod_rewrite.c>
+  #RewriteEngine On
+  #Options +FollowSymlinks
+  #Options +SymLinksIfOwnerMatch
+
+  #allows removal of html file extension
+  #RewriteCond %{ENV:REDIRECT_STATUS} 200
+  #RewriteCond %{REQUEST_FILENAME} !-f
+  #RewriteCond %{REQUEST_FILENAME} !-d
+  #RewriteRule ^(.*)$ $1.html [QSA]
+
+  #RewriteBase /
+  #RewriteOptions <options>
+</IfModule>
